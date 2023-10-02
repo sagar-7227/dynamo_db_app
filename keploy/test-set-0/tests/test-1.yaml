@@ -1,0 +1,45 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9090/products
+        header:
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-US,en
+            Connection: keep-alive
+            Host: localhost:9090
+            Sec-Ch-Ua: '"Brave";v="117", "Not;A=Brand";v="8", "Chromium";v="117"'
+            Sec-Ch-Ua-Mobile: ?0
+            Sec-Ch-Ua-Platform: '"Windows"'
+            Sec-Fetch-Dest: document
+            Sec-Fetch-Mode: navigate
+            Sec-Fetch-Site: none
+            Sec-Fetch-User: ?1
+            Sec-Gpc: "1"
+            Upgrade-Insecure-Requests: "1"
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 500
+        header:
+            Content-Language: en-US
+            Content-Length: "287"
+            Content-Type: text/html;charset=UTF-8
+            Date: Sun, 01 Oct 2023 07:06:07 GMT
+        body: <html><body><h1>Whitelabel Error Page</h1><p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p><div id='created'>Sun Oct 01 12:36:07 IST 2023</div><div>There was an unexpected error (type=Internal Server Error, status=500).</div></body></html>
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1696143972

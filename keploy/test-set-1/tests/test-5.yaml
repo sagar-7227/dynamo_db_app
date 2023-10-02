@@ -1,0 +1,35 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-5
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9090/products
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: localhost:9090
+            Postman-Token: 93649c6c-25ec-48dc-bf27-523934728496
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 500
+        header:
+            Content-Type: application/json
+            Date: Sun, 01 Oct 2023 08:22:22 GMT
+        body: '{"timestamp":"2023-10-01T08:22:22.777+00:00","status":500,"error":"Internal Server Error","path":"/products"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - body.timestamp
+            - header.Date
+    created: 1696148548

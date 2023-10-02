@@ -1,0 +1,33 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9090/products
+        header:
+            Accept: '*/*'
+            Content-Type: application/json
+            Host: localhost:9090
+            User-Agent: curl/7.81.0
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 500
+        header:
+            Content-Type: application/json
+            Date: Sun, 01 Oct 2023 14:27:12 GMT
+        body: '{"timestamp":"2023-10-01T14:27:12.382+00:00","status":500,"error":"Internal Server Error","path":"/products"}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+            - body.timestamp
+    created: 1696170437

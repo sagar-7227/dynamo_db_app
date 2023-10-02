@@ -1,0 +1,38 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9090/api/hello
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: localhost:9090
+            Postman-Token: 73054b36-285e-489a-bebe-527b204a9a84
+            User-Agent: PostmanRuntime/7.33.0
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "13"
+            Content-Type: text/plain;charset=UTF-8
+            Date: Sun, 01 Oct 2023 13:56:53 GMT
+            Keep-Alive: timeout=60
+        body: Hello, World!
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - body
+            - header.Date
+    created: 1696168617
